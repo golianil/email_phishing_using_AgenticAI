@@ -1,0 +1,340 @@
+Delivered-To: anilreddy.g83@gmail.com
+Received: by 2002:a05:6a21:62c4:b0:240:405:4351 with SMTP id wo4csp1994040pzb;
+        Tue, 19 Aug 2025 04:44:01 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGtcFg9n7UbVAJ0ZHZ//1XLeNCVBbkxOFDvt8em+J6KGzh0v9Gr16YAix19ak5U1NO+1ptj
+X-Received: by 2002:a05:6214:1d2a:b0:70b:a0c5:5688 with SMTP id 6a1803df08f44-70c2b6d35c8mr20676276d6.8.1755603841504;
+        Tue, 19 Aug 2025 04:44:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1755603841; cv=none;
+        d=google.com; s=arc-20240605;
+        b=bTe7W+avlnWGWHrqMpZNMH+U0y4EyBdyF1uP2s7PW0uP5+wHYdATkmlwDxnBOWyWXq
+         r+A5hwvOJzVJOMncBaF6jmOzJTS7B2RZsfXKkdj4HTm7H5QwV/QgO8auCUGSqMikHDCY
+         whIbF/RgeVuaRXkucctiQxQ1CUkQvVDZ4U5XxX3J9MFXjEXDbRoGk9ZrkBxDuFHb+pBC
+         NpzLzmOcRUGNUVMQxtkfMsJjpltMlhj7ANgr2MKsg3SLsuyHwiR0bC6LgmvkRhNqrz2i
+         2y0NYCLdEUCDsEug9tAV1I/A2rl2SlbeU3ouR8Q2GUvHJ8qEAwG37UrSF9M8NX4FpyrD
+         TbCQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:precedence:feedback-id:list-id:list-unsubscribe
+         :message-id:subject:reply-to:from:to:date:domainkey-signature
+         :dkim-signature:dkim-signature;
+        bh=B3bqCsg3fgrO2dLJRT8nBZCPUj1ZVhG0l8D6mcOYUo4=;
+        fh=Axg8D0B6oKtpRA69g+3VELs6cUumlb8tjeseCrJx4OE=;
+        b=QvBecREUcJ8V3+WUuyY7Ujrm1cy5CD5AD51nbVSUR2FVrXppuOCo7wnqSaC65btVI4
+         Lq59E3EQYcsfwYvJSPMLhxWG2udRRulmMgbIl96HIun6moAEOopdjhBLKJB6VEnrEUOB
+         4675KmRVL/Dr8Sj9rrT0LazkN0Rog2/sy2wkiLRpcWU9yDS3p+MPWSbCqAWK4lbjyjYa
+         qsG8f8S0fTGEdH4Zd6Ee4/jmD6Zt4JPon2Ekt95SfWZjtFcQNbMDW0Ha7TTTi7rOl2+o
+         U/r4w064ESwgpDeWpoE24mk6EP9kxorCho0IH8+Csru4y1sNUwPGnukafA04yEUBycsw
+         Fbxw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailer.emailsinbox.com header.s=default header.b=XiJo4g2H;
+       dkim=permerror (no key for signature) header.i=@adm1.adsmediamarketing.com header.s=default header.b=qwRWQKnO;
+       spf=pass (google.com: domain of newsletter@mailer.emailsinbox.com designates 149.56.116.181 as permitted sender) smtp.mailfrom=newsletter@mailer.emailsinbox.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mailer.emailsinbox.com
+Return-Path: <newsletter@mailer.emailsinbox.com>
+Received: from adm1.adsmediamarketing.com (adm1.adsmediamarketing.com. [149.56.116.181])
+        by mx.google.com with ESMTPS id 6a1803df08f44-70ba9015c54si35644866d6.60.2025.08.19.04.44.01
+        for <anilreddy.g83@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 19 Aug 2025 04:44:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of newsletter@mailer.emailsinbox.com designates 149.56.116.181 as permitted sender) client-ip=149.56.116.181;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailer.emailsinbox.com header.s=default header.b=XiJo4g2H;
+       dkim=permerror (no key for signature) header.i=@adm1.adsmediamarketing.com header.s=default header.b=qwRWQKnO;
+       spf=pass (google.com: domain of newsletter@mailer.emailsinbox.com designates 149.56.116.181 as permitted sender) smtp.mailfrom=newsletter@mailer.emailsinbox.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mailer.emailsinbox.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; s=default; d=mailer.emailsinbox.com; h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Id:Feedback-ID:MIME-Version:Content-Type; i=newsletter@mailer.emailsinbox.com; bh=B3bqCsg3fgrO2dLJRT8nBZCPUj1ZVhG0l8D6mcOYUo4=; b=XiJo4g2HcVHHuUw4xvn16lYfwdFY4EO9Bj5ueuDoLwvU8r5BvfjS4+fIF7RBaVnVNScrmXqjVVZi
+   MWQK7t+ZJ9ZmuGm6jWJjuQ2H+MSRQkE25N/Kr6cIqzpJ2iuY4VZ44+N6FajO9KPejWxF5pnkkMTJ
+   Rz8Z27otS7PxecXsdlDrZOLs/12QBNsD4TTRAxaF1g7RwSb1ReYEcAV5ywi2AcESjPjrTxbioOim
+   QAu0YzQD75jizOqc6v6Bj6VrFo9aXi4btLHdaMmAG2VvI0f0L7xUjExIeYhF3QVvCiwLoJHHvqf6
+   OW+1anXThXXaS46mrlOTq8ojF4wk2+xEQkNWLw==
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=default; d=adm1.adsmediamarketing.com; h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Id:MIME-Version:Content-Type; bh=4F6xHloaNvgRXo5S1BvbvNhoOXY=; b=qwRWQKnOz/4BBwhcnKJGAKOXaLyGdLs1N6WNhM0eIWeZLW244lTu2WcsI2r8FoTvh/teQt6U5kxl
+   eN13XbEAfFsnM5sQORTXHFHLRPJoaaJe+qSzlL1jdEyW3dbMehScn5w1twvXtukMYv2gEHbVO8Gs
+   CuxDpV5f5Jc5bKAMEIuRs9QPtWVnHFQdbyOFkiKta9pjw3P8uDD0NgRxqeM5KKFx9LLng3y0jMY4
+   cosM3G4nI518qMvPmcWxx2uy4hX3GWpQhnKlIQ/lcnlvKUUeMOY7hTNcPBVZHETTRToWfe3baS3t
+   jzy3MIwe4j8sbhFvHt/RfNAup1EH6BwrVrx0ZA==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=mailer.emailsinbox.com; b=Oao4+hgrCVtgfooDzGo/e6Mx4WYSYR9SDGMG0+Gah727wgtpahuHbCpTizLnHo4q7KnnamkOl/WP
+   xpSlbd6KMKqrE5+f0cC1lkrrCSXfIwkA+SHQB803R/lsACU95yVIA13L0URsNB606747Mh/RBwYx
+   q/6MKTTbTR7FIXsNYwuwbFTDF7Cw/By+sFACjUdyBVgrD8HQCLJqsLSAE/mj3DxYM5srO9gTLUNW
+   y/KJwq0WFx0W2DEe/AGdji47LwP1Umkgc6NEMc0tDQMB3Jg3jkzfw1Fv7ObakGJpqQ6cUT9k5E9t
+   HV5PIpV8G6EZd4X++I6Ivq8PhrT5MSQepWZI3w==;
+Received: by adm1.adsmediamarketing.com id hkhho3i19tkd for <anilreddy.g83@gmail.com>; Tue, 19 Aug 2025 17:06:17 +0530 (envelope-from <newsletter@mailer.emailsinbox.com>)
+Date: Tue, 19 Aug 2025 11:36:17 +0000
+To: "anilreddy.g83@gmail.com" <anilreddy.g83@gmail.com>
+From: POLICY EXPIRY <newsletter@mailer.emailsinbox.com>
+Reply-To: POLICY EXPIRY <newsletter@mailer.emailsinbox.com>
+Subject: anilreddy.g83@gmail.com, Vehicle Policy Expired? Reactivate in Just 2 Minutes ⏳
+Message-ID: <c18c93e63d52c74f5444126dc3bda338@mailer.emailsinbox.com>
+X-Lnhr-Campaign-Uid: yy055e1cl6b0e
+X-Lnhr-Subscriber-Uid: qe9335qgx98cc
+X-Lnhr-Customer-Uid: xb775ay05k066
+X-Lnhr-Customer-Gid: 0
+X-Lnhr-Delivery-Sid: 1
+X-Lnhr-Tracking-Did: 0
+List-Unsubscribe: <https://app.adsmediamarketing.com/wizmail/index.php/lists/ej108wwen69a7/unsubscribe/qe9335qgx98cc/yy055e1cl6b0e/unsubscribe-direct?source=email-client-unsubscribe-button>, <mailto:newsletter@mailer.emailsinbox.com?subject=Campaign-Uid:yy055e1cl6b0e / Subscriber-Uid:qe9335qgx98cc - Unsubscribe request&body=Please unsubscribe me!>
+List-Id: ej108wwen69a7 <April_2024_Opener0.1>
+X-Report-Abuse: Please report abuse for this campaign here: https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e/report-abuse/ej108wwen69a7/qe9335qgx98cc
+Feedback-ID: yy055e1cl6b0e:qe9335qgx98cc:ej108wwen69a7:xb775ay05k066
+Precedence: bulk
+X-Lnhr-EBS: https://app.adsmediamarketing.com/wizmail/index.php/lists/block-address
+Return-Path: newsletter@mailer.emailsinbox.com
+X-Sender: newsletter@mailer.emailsinbox.com
+X-Receiver: anilreddy.g83@gmail.com
+X-Lnhr-Mailer: PHPMailer - 5.2.21
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1_52da92f79122f0b792fdee6968f14fcc"
+
+--b1_52da92f79122f0b792fdee6968f14fcc
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Notification: VHCL002423-anilreddy.g83@gmail.com,
+e-Policy expired for Policy Number LMV0524AN04321. Renewed or not?,
+check status here
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd.
+Our records show it is expired or was pending for urgent renewal. see
+details
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd
+Enter vehicle number
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd
+to check recent policy status. (Note - Please use district pincode to
+see accurate details)
+To check insurance expiry of your other vehicle, Proceed here >
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fdor
+If you are looking to buy new car/bike, request quote here.
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd
+If your policy is expired, renew immediately with best offers for
+anilreddy.g83@gmail.com, renew now
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd
+Warm regards,
+Policy Admin
+Date:=C2=A019-August-2025
+Email: anilreddy.g83@gmail.com,
+Unsubscribe
+https://app.adsmediamarketing.com/wizmail/index.php/lists/ej108wwen69a7/uns=
+ubscribe/qe9335qgx98cc/yy055e1cl6b0e
+
+
+--b1_52da92f79122f0b792fdee6968f14fcc
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"en" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns=
+:v=3D"urn:schemas-microsoft-com:vml">
+<head>
+=09<title></title>
+=09<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+><meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+.0"><!--[if mso]>
+<xml><w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word"><w:D=
+ontUseAdvancedTypographyReadingMail/></w:WordDocument>
+<o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/=
+></o:OfficeDocumentSettings></xml>
+<![endif]--><!--[if !mso]><!--><!--<![endif]-->
+=09<style type=3D"text/css">* {
+=09=09=09box-sizing: border-box;
+=09=09}
+
+=09=09body {
+=09=09=09margin: 0;
+=09=09=09padding: 0;
+=09=09}
+
+=09=09a[x-apple-data-detectors] {
+=09=09=09color: inherit !important;
+=09=09=09text-decoration: inherit !important;
+=09=09}
+
+=09=09#MessageViewBody a {
+=09=09=09color: inherit;
+=09=09=09text-decoration: none;
+=09=09}
+
+=09=09p {
+=09=09=09line-height: inherit
+=09=09}
+
+=09=09.desktop_hide,
+=09=09.desktop_hide table {
+=09=09=09mso-hide: all;
+=09=09=09display: none;
+=09=09=09max-height: 0px;
+=09=09=09overflow: hidden;
+=09=09}
+
+=09=09.image_block img+div {
+=09=09=09display: none;
+=09=09}
+
+=09=09sup,
+=09=09sub {
+=09=09=09font-size: 75%;
+=09=09=09line-height: 0;
+=09=09}
+
+=09=09@media (max-width:500px) {
+=09=09=09.mobile_hide {
+=09=09=09=09display: none;
+=09=09=09}
+
+=09=09=09.row-content {
+=09=09=09=09width: 100% !important;
+=09=09=09}
+
+=09=09=09.stack .column {
+=09=09=09=09width: 100%;
+=09=09=09=09display: block;
+=09=09=09}
+
+=09=09=09.mobile_hide {
+=09=09=09=09min-height: 0;
+=09=09=09=09max-height: 0;
+=09=09=09=09max-width: 0;
+=09=09=09=09overflow: hidden;
+=09=09=09=09font-size: 0px;
+=09=09=09}
+
+=09=09=09.desktop_hide,
+=09=09=09.desktop_hide table {
+=09=09=09=09display: table !important;
+=09=09=09=09max-height: none !important;
+=09=09=09}
+=09=09}
+=09</style>
+=09<!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-=
+text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
+</head>
+<body class=3D"body" data-gr-ext-disabled=3D"forever" data-gr-ext-installed=
+=3D"" data-new-gr-c-s-check-loaded=3D"14.1249.0" data-new-gr-c-s-loaded=3D"=
+14.1249.0" style=3D"background-color: #ffffff; margin: 0; padding: 0; -webk=
+it-text-size-adjust: none; text-size-adjust: none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"nl-contain=
+er" role=3D"presentation" style=3D"mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; background-color: #ffffff;" width=3D"100%">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td><br />
+=09=09=09<span style=3D"font-size:18px;">Notification: <strong>VHCL002423-a=
+nilreddy.g83@gmail.com,</strong><br />
+=09=09=09<br />
+=09=09=09e-Policy expired for Policy Number LMV0524AN04321. Renewed or not?=
+, <a href=3D"https://app.adsmediamarketing.com/wizmail/index.php/campaigns/=
+yy055e1cl6b0e/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf3=
+9fd" style=3D"color:#000000;text-decoration:none;"><span style=3D"color:#29=
+80b9;"><u>check status here</u></span></a>. Our records show it is <strong>=
+expired</strong> or was pending for urgent renewal. <a href=3D"https://app.=
+adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e/track-url/q=
+e9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd" style=3D"color:#0000=
+00;text-decoration:none;"><span style=3D"color:#2980b9;"><u>see details</u>=
+</span></a><br />
+=09=09=09<br />
+=09=09=09<a href=3D"https://app.adsmediamarketing.com/wizmail/index.php/cam=
+paigns/yy055e1cl6b0e/track-url/qe9335qgx98cc/5937419f5ca95cdad4285802961901=
+06fcbf39fd" style=3D"color:#000000;text-decoration:none;"><span style=3D"co=
+lor:#2980b9;"><u>Enter vehicle number</u></span></a> to check recent policy=
+ status. (Note - Please use <strong>district pincode</strong> to see accura=
+te details)<br />
+=09=09=09<br />
+=09=09=09To check insurance expiry of your other vehicle, <a href=3D"https:=
+//app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e/track=
+-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd" style=3D"color=
+:#000000;text-decoration:none;"><span style=3D"color:#2980b9;"><u>Proceed h=
+ere > </u></span></a>or If you are looking to buy new car/bike, <a href=3D"=
+https://app.adsmediamarketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e=
+/track-url/qe9335qgx98cc/5937419f5ca95cdad428580296190106fcbf39fd" style=3D=
+"color:#000000;text-decoration:none;"><span style=3D"color:#2980b9;"><u>req=
+uest quote here.</u></span></a><br />
+=09=09=09<br />
+=09=09=09<strong>If your policy is expired</strong>, renew immediately with=
+ best offers for anilreddy.g83@gmail.com, <a href=3D"https://app.adsmediama=
+rketing.com/wizmail/index.php/campaigns/yy055e1cl6b0e/track-url/qe9335qgx98=
+cc/5937419f5ca95cdad428580296190106fcbf39fd" style=3D"color:#000000;text-de=
+coration:none;"><span style=3D"color:#2980b9;"><u>renew now</u></span></a><=
+br />
+=09=09=09<br />
+=09=09=09Warm regards,<br />
+=09=09=09<strong>Policy Admin</strong><br />
+=09=09=09<br />
+=09=09=09<strong>Date:</strong>=C2=A019-August-2025<br />
+=09=09=09<strong>Email:</strong> anilreddy.g83@gmail.com,</span></td>
+=09=09</tr>
+=09</tbody>
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<a href=3D"https://app.adsmediamarketing.com/wizmail/index.php/lists/ej108w=
+wen69a7/unsubscribe/qe9335qgx98cc/yy055e1cl6b0e">Unsubscribe</a><img width=
+=3D"1" height=3D"1" src=3D"https://app.adsmediamarketing.com/wizmail/index.=
+php/campaigns/yy055e1cl6b0e/track-opening/qe9335qgx98cc" alt=3D"" />
+</body>
+</html>
+
+
+--b1_52da92f79122f0b792fdee6968f14fcc--

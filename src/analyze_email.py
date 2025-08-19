@@ -564,7 +564,7 @@ def main():
         "raw_headers"
     ]
 
-    with open(args.output_csv, "w", newline="", encoding="utf-8") as f:
+    with open(args.output_csv, "w", newline="", encoding="utf-8", errors="ignore") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_MINIMAL)
         writer.writeheader()
         for r in rows:

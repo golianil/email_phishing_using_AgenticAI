@@ -1,0 +1,29 @@
+file_path,subject,from_display_name,from_address,to,date,return_path,reply_to,message_id,mime_version,spf_result,dkim_result,dmarc_result,dkim_domain,x_spam_status,num_received_hops,received_chain,urls_found,num_urls,url_domains,attachments,attachment_hashes,body_sha256,has_html_form,has_html_script,base64_ratio,suspicious_score,verdict,reasons,raw_headers
+.\sample_email\malicious_phish_sample.eml,Urgent: Your account will be deactivated in 24 hours,Microsoft Account Security,support@microsoft.com.secure-login.com,ajay@example.com,2025-08-19T11:14:19+00:00,bounce@secure-login.com,support@secure-login.com,<20250819.111419.987654321@mail.suspicious.ru>,1.0,fail,fail,fail,secure-login.com,"yes, score=9.7 required=5.0 tests=freemail_forged_replyto,dkim_signed,spf_fail,uri_obfu,mime_html_only",2,"from mail.suspicious.ru (unknown [185.10.10.10]) by mx.example.com with ESMTPS id 12345ABCDEF for <ajay@example.com>; Tue, 19 Aug 2025 16:44:21 +0530 (IST) | from infected-host (unknown [10.0.0.23]) by mail.suspicious.ru (Postfix) with ESMTPSA id 67890FEDCBA for <ajay@example.com>; Tue, 19 Aug 2025 11:14:19 +0000 (UTC)",http://secure-login.example/account/verify?uid=293847&session=abc,1,secure-login.example,"Invoice_2025_08_19.txt(application/octet-stream,68B)",Invoice_2025_08_19.txt:275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,cdf8fe4017924b7f3580e0f0ff1864323b10a14909303a62235fc5aa2d227004,False,False,0.00,100,Malicious,"SPF=fail; DKIM=fail; DMARC=fail; X-Spam-Status=yes, score=9.7 required=5.0 tests=freemail_forged_replyto,dkim_signed,spf_fail,uri_obfu,mime_html_only; From domain (microsoft.com.secure-login.com) ≠ Return-Path (secure-login.com); From domain (microsoft.com.secure-login.com) ≠ Reply-To (secure-login.com); From domain (microsoft.com.secure-login.com) ≠ DKIM d= (secure-login.com); Link domains differ from sender domain; Suspicious keywords in body","Return-Path: <bounce@secure-login.com>
+Received: from mail.suspicious.ru (unknown [185.10.10.10])
+        by mx.example.com with ESMTPS id 12345ABCDEF
+        for <ajay@example.com>; Tue, 19 Aug 2025 16:44:21 +0530 (IST)
+Received: from infected-host (unknown [10.0.0.23])
+        by mail.suspicious.ru (Postfix) with ESMTPSA id 67890FEDCBA
+        for <ajay@example.com>; Tue, 19 Aug 2025 11:14:19 +0000 (UTC)
+Authentication-Results: mx.example.com;
+        spf=fail (sender IP 185.10.10.10 is not authorized) smtp.mailfrom=bounce@secure-login.com;
+        dkim=fail (body hash did not verify) header.d=secure-login.com header.s=selector1;
+        dmarc=fail action=reject header.from=microsoft.com.secure-login.com
+Received-SPF: fail (mx.example.com: domain of secure-login.com does not designate 185.10.10.10 as permitted sender) client-ip=185.10.10.10; envelope-from=bounce@secure-login.com; helo=mail.suspicious.ru
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=secure-login.com; s=selector1;
+        h=from:to:subject:date:mime-version; bh=notavalidhash=; b=INVALIDSIGNATURE
+X-Originating-IP: [185.10.10.10]
+X-Spam-Flag: YES
+X-Spam-Status: Yes, score=9.7 required=5.0 tests=FREEMAIL_FORGED_REPLYTO,DKIM_SIGNED,SPF_FAIL,URI_OBFU,MIME_HTML_ONLY
+X-Attachment-Hash: sha256=275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f; md5=44d88612fea8a8f36de82e1278abb02f
+List-Unsubscribe: <mailto:unsubscribe@secure-login.com>
+From: ""Microsoft Account Security"" <support@microsoft.com.secure-login.com>
+Reply-To: ""Microsoft Account Security"" <support@secure-login.com>
+To: Ajay S <ajay@example.com>
+Subject: Urgent: Your account will be deactivated in 24 hours
+Date: Tue, 19 Aug 2025 11:14:19 +0000
+Message-ID: <20250819.111419.987654321@mail.suspicious.ru>
+MIME-Version: 1.0
+Content-Language: en-US
+Content-Type: multipart/mixed; boundary=""----=_Part_123456_789012345.1692443659"""
