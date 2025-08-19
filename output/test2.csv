@@ -1,0 +1,86 @@
+file_path,subject,from_display_name,from_address,to,date,return_path,reply_to,message_id,mime_version,spf_result,dkim_result,dmarc_result,dkim_domain,x_spam_status,num_received_hops,received_chain,urls_found,num_urls,url_domains,attachments,attachment_hashes,body_sha256,has_html_form,has_html_script,base64_ratio,suspicious_score,verdict,reasons,raw_headers
+.\sample_email\dummy.eml,,,,,,,,,,unknown,unknown,unknown,,,0,,,0,,,,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,False,False,0.00,25,Benign,SPF=unknown; DKIM=unknown; DMARC=unknown,
+.\sample_email\mail1.eml,UP To 60% OFF ON OUTLET + EXTRA 15% OFF ON EVERYTHING,Adidas Loot Offers,newsletter@mailer.emailsinbox.com,anilreddy.g83@gmail.com,2025-08-19T08:54:12+00:00,newsletter@mailer.emailsinbox.com,newsletter@mailer.emailsinbox.com,<ceb21824b03ef258340c18d775e9ac9b@mailer.emailsinbox.com>,1.0,pass,pass,pass,mailer.emailsinbox.com,,3,"by 2002:a05:6a21:62c4:b0:240:405:4351 with SMTP id wo4csp1918814pzb; Tue, 19 Aug 2025 01:55:56 -0700 (PDT) | from adm5.adsmediamarketing.com (adm5.adsmediamarketing.com. [149.56.116.227]) by mx.google.com with ESMTPS id 6a1803df08f44-70baa774784si35896646d6.1045.2025.08.19.01.55.56 for <anilreddy.g83@gmail.com> (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128); Tue, 19 Aug 2025 01:55:56 -0700 (PDT) | by adm5.adsmediamarketing.com id hkgu1pi19tk0 for <anilreddy.g83@gmail.com>; Tue, 19 Aug 2025 14:24:12 +0530 (envelope-from <newsletter@mailer.emailsinbox.com>)",https://app.adsmediamarketing.com/wizmail/index.php/campaigns/tb718bfakae07/track-url/jk0545x4gb549/635fd9a9a62b0b937b8bf38faa20bc8bb1570334 https://app.adsmediamarketing.com/wizmail/index.php/lists/mo600e8m1pa05/unsubscribe/jk0545x4gb549/tb718bfakae07,2,app.adsmediamarketing.com,,,cc6beb5619262e73531383c1455dab0dec3306987ecacd09844b36965cbead32,False,False,0.00,10,Benign,Link domains differ from sender domain,"Delivered-To: anilreddy.g83@gmail.com
+Received: by 2002:a05:6a21:62c4:b0:240:405:4351 with SMTP id wo4csp1918814pzb;
+        Tue, 19 Aug 2025 01:55:56 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH9qErOZVLw2sew8g/Un8fjBEni1xduA6xZ85QZKDv8V8wqYPHZLiw9foDeqFs+v0thScCL
+X-Received: by 2002:a05:620a:1a25:b0:7e6:8751:96ae with SMTP id af79cd13be357-7e9f3360c6emr208075585a.31.1755593756543;
+        Tue, 19 Aug 2025 01:55:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1755593756; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Bdu3fSWBT/Q1LWqbdrp9jDYMVv3m6tEExhsTtCPyS89r47khUFuN91IliF3GWbyWXd
+         /fDWYg+JeqpQvgtmwpvJT/sw3Ji5p0EJ7OrsgGBDHgTgo07zQWJZuGmzWdiUkuA0mTEQ
+         p7dvAXKdLMreof9PWLQXS4+LWVH6BDoA1WiCutwztU5cme33xhMV6YB57qoIlbGnqf+t
+         gLDe7/wkRB5jPnmiZpwMfO56a0IlEA/KsjZq8y1hGL8ET4kQJNnJrTbYqHUw7KtnI5AC
+         IJUSYvl8iYulnen9nbiuEPIsPQR7fbBgFhUqW297ezpDo/xNmmOYHYjLCBM/DumlV1I+
+         h0pA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:precedence:feedback-id:list-id:list-unsubscribe
+         :message-id:subject:reply-to:from:to:date:domainkey-signature
+         :dkim-signature:dkim-signature;
+        bh=SVIsF9g0GUYjUtTI9BPtUIbSx3sCGj0xS1WPDxBZuS4=;
+        fh=Axg8D0B6oKtpRA69g+3VELs6cUumlb8tjeseCrJx4OE=;
+        b=gdsSfBbqK4u4aG4ySrM7k/kqPSfms4TXyxAUihdkWlZEuAiRoXRgLcPn7tXk32UdER
+         yZ47rqs3Cy5BSD2lWsModkEM2p6WSTkRBXd/ReHRWEmzJcBjaU/UxZi7QfKSsZapRz3O
+         Y9867YMwKx0kDl2jlfE49F3CKe7mFidLPuEx+ExCs/dNyngqWBKHgTD2BOeIx2raqTt8
+         7z9Vv4FrtBHc6cqCvM0AmluzMUI5wl2gvowsJsyRB1MflPbFL7ALve2dgCU2IfnYTliz
+         U1niqicVJB93ljxSAlYAEzLAjDoQF0DvFcfCqbZjVWBayXvF7qbZRvkmB1KBPUzphyBe
+         WZUw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailer.emailsinbox.com header.s=default header.b=YbZKmWwO;
+       dkim=permerror (no key for signature) header.i=@adm5.adsmediamarketing.com header.s=default header.b=IvIgX2Hp;
+       spf=pass (google.com: domain of newsletter@mailer.emailsinbox.com designates 149.56.116.227 as permitted sender) smtp.mailfrom=newsletter@mailer.emailsinbox.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mailer.emailsinbox.com
+Return-Path: <newsletter@mailer.emailsinbox.com>
+Received: from adm5.adsmediamarketing.com (adm5.adsmediamarketing.com. [149.56.116.227])
+        by mx.google.com with ESMTPS id 6a1803df08f44-70baa774784si35896646d6.1045.2025.08.19.01.55.56
+        for <anilreddy.g83@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 19 Aug 2025 01:55:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of newsletter@mailer.emailsinbox.com designates 149.56.116.227 as permitted sender) client-ip=149.56.116.227;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailer.emailsinbox.com header.s=default header.b=YbZKmWwO;
+       dkim=permerror (no key for signature) header.i=@adm5.adsmediamarketing.com header.s=default header.b=IvIgX2Hp;
+       spf=pass (google.com: domain of newsletter@mailer.emailsinbox.com designates 149.56.116.227 as permitted sender) smtp.mailfrom=newsletter@mailer.emailsinbox.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mailer.emailsinbox.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; s=default; d=mailer.emailsinbox.com; h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Id:Feedback-ID:MIME-Version:Content-Type; i=newsletter@mailer.emailsinbox.com; bh=SVIsF9g0GUYjUtTI9BPtUIbSx3sCGj0xS1WPDxBZuS4=; b=YbZKmWwOi0b16B2RMDV96ElAzob0J3V65tXCj73w/nZ3+jkCdEPF8QToMqFFQzbrVWpuIGRnRjhh
+   qmQYd6NyQyvC89T0fVhCHFc3mTF7nv8HohJk3ZBU5GhrPgycGcE6htunRWLwa4Uajp74gTxWDVOd
+   OLWprS3Dk7c1IfCNFO9AxBBMMfzS4uz2/w5HJ3FgoqKASdud+RhcNbGTNuukWmE4+at+B5IS4RyO
+   gVZSkGd8V+SUe9pSTLiGBal/DYl3xs8MDgbF8GIEe8WLaMjBiGM5LCGvgCPFenMFt96b/zMeVAlO
+   CA7/f6bXv5jtdDYWUp98cLnUOoc2kJ1TQiJ6eA==
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=default; d=adm5.adsmediamarketing.com; h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Id:MIME-Version:Content-Type; bh=NpVG8nuc0egdIv6wvhkH5zAKl0I=; b=IvIgX2HpS++g7riq1DTAhjJmQYB52JLBWOv28bVyqIPLmqdAKPsIRtkciiHsee7QTRE+EnUrQX8W
+   6RA84DesOU3gs/pPu9/nWRnNJkRMd5zN4RbAeZSH3Y4eAjbemL7nHz06+1dncXynFD+CcaR5SE+D
+   VJYm02e8/RxK0HZ0bW7haiTsyjU9K4Hd+TCF0Y1lv0kQCpuTFlHL/rGMapCFF8Kbkkd2nWsqtYHl
+   wAx1jhcCWxnpdB+8yO8rwlF52bhJ76+jcZXk+FW7A2pxoC3EMrGWCnBXkh8mZSHeOtspOe01qR/b
+   wAsTp7DiXcV+MkRr40iqBSPJIiLOrA8YvyjIsw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=mailer.emailsinbox.com; b=uzrmddPxIR7G/CUvfBR8GClRVGvlPYEbmkSU9DoWkQluPCHZ9E4A4VG0k3rdQLY1KZOc47I934Y/
+   HSBboL0RQ8yPI/UrIn6SEzxrPtbtL4/2paiLT3ENPs/eqfajhANuLHExvUD0rQUW15sD464kWx/m
+   P/JC+AxYpGDsrNejETK27B7z7tfEPf4s0xQ7CKI6TwQgLlunOa2+hodGCDrLdgM3/oBtZI4DUG0H
+   0Q76XW2vgDRLCWdEYy5WVQGyV/Qwcecj85OPbYjKKT+cKy37l0/woyiJZD1aCvoSCvTgL3IO69LU
+   dkCPzN0IYvKfX+sMNNOSlAI4hL21Z+uSXByvsA==;
+Received: by adm5.adsmediamarketing.com id hkgu1pi19tk0 for <anilreddy.g83@gmail.com>; Tue, 19 Aug 2025 14:24:12 +0530 (envelope-from <newsletter@mailer.emailsinbox.com>)
+Date: Tue, 19 Aug 2025 08:54:12 +0000
+To: ""anilreddy.g83@gmail.com"" <anilreddy.g83@gmail.com>
+From: Adidas Loot Offers <newsletter@mailer.emailsinbox.com>
+Reply-To: Adidas Loot Offers <newsletter@mailer.emailsinbox.com>
+Subject: UP To 60% OFF ON OUTLET + EXTRA 15% OFF ON EVERYTHING
+Message-ID: <ceb21824b03ef258340c18d775e9ac9b@mailer.emailsinbox.com>
+X-Lnhr-Campaign-Uid: tb718bfakae07
+X-Lnhr-Subscriber-Uid: jk0545x4gb549
+X-Lnhr-Customer-Uid: xb775ay05k066
+X-Lnhr-Customer-Gid: 0
+X-Lnhr-Delivery-Sid: 1
+X-Lnhr-Tracking-Did: 0
+List-Unsubscribe: <https://app.adsmediamarketing.com/wizmail/index.php/lists/mo600e8m1pa05/unsubscribe/jk0545x4gb549/tb718bfakae07/unsubscribe-direct?source=email-client-unsubscribe-button>, <mailto:newsletter@mailer.emailsinbox.com?subject=Campaign-Uid:tb718bfakae07 / Subscriber-Uid:jk0545x4gb549 - Unsubscribe request&body=Please unsubscribe me!>
+List-Id: mo600e8m1pa05 <Feabruary_2024_Opener>
+X-Report-Abuse: Please report abuse for this campaign here: https://app.adsmediamarketing.com/wizmail/index.php/campaigns/tb718bfakae07/report-abuse/mo600e8m1pa05/jk0545x4gb549
+Feedback-ID: tb718bfakae07:jk0545x4gb549:mo600e8m1pa05:xb775ay05k066
+Precedence: bulk
+X-Lnhr-EBS: https://app.adsmediamarketing.com/wizmail/index.php/lists/block-address
+Return-Path: newsletter@mailer.emailsinbox.com
+X-Sender: newsletter@mailer.emailsinbox.com
+X-Receiver: anilreddy.g83@gmail.com
+X-Lnhr-Mailer: PHPMailer - 5.2.21
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary=""b1_be4408a538f3fda2f59e06ee5f4a7304"""

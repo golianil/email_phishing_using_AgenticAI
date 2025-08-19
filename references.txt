@@ -1,0 +1,27 @@
+#analyzer_email.py script’s score & verdict are heuristic, not a standardized benchmark. However they are based from below references:
+    DMARC, DKIM, and SPF
+        https://datatracker.ietf.org/doc/html/rfc7208
+        https://www.valimail.com/blog/understanding-email-authentication-headers/
+        https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf
+    Domain
+        https://support.google.com/a/answer/2466580
+    Suspicious link patterns:
+        https://www.menlosecurity.com/blog/url-shortening-allows-threats-to-evade-url-filtering-and-categorization-tools
+        https://blog.knowbe4.com/phishing-attacks-continue-to-leverage-url-shorteners-to-obfuscate-malicious-links
+        https://safecomputing.umich.edu/protect-yourself/phishing-scams/shortened-url-security
+        https://docs.apwg.org/ecrimeresearch/2018/5351273.pdf
+    Attachments & risky types:
+        https://support.microsoft.com/en-us/office/blocked-attachments-in-outlook-434752e1-02d3-4e90-9124-8b81e49a8519
+        https://attack.mitre.org/techniques/T1204/002/
+        https://media.defense.gov/2023/Oct/18/2003322402/-1/-1/0/CSI-PHISHING-GUIDANCE.PDF
+        https://www.bleepingcomputer.com/news/security/microsoft-outlook-to-block-more-risky-attachments-used-in-attacks
+    Header-chain oddities
+        https://abnormal.ai/blog/what-is-an-email-header
+        https://www.thesslstore.com/blog/how-to-read-an-email-header/
+    HTML forms/scripts & base64 density
+        https://intezer.com/blog/automate-analysis-phishing-email-files
+        https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks
+    X-Spam-Status hint
+        https://cwiki.apache.org/confluence/display/spamassassin/AdjustRuleScore
+        https://spamassassin.apache.org/full/3.0.x/dist/doc/Mail_SpamAssassin_Conf.html
+
